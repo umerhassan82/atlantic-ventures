@@ -185,3 +185,8 @@ node test.js
 - Timestamps cannot be in the future
 - GPS coordinates validated (lat: -90 to 90, lng: -180 to 180)
 - Database uses TimescaleDB for time-series optimization
+
+
+## Presentaion link
+
+https://docs.google.com/presentation/d/1dbV6DXDTU0BpESPQxIt4wEFaGL11UlioQa3jP9pXR0Q/edit?usp=sharing
