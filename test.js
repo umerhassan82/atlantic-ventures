@@ -32,7 +32,10 @@ async function testIngest() {
     
     const response = await fetch('http://localhost:3000/api/v1/ingest', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'x-api-key': 'iot-atlantic-ventures-12345'
+      },
       body: JSON.stringify(testData)
     });
     

@@ -1,11 +1,12 @@
 import { Router } from 'express';
 import { ingestService } from '../services/ingest';
 import { bulkIngestSchema } from '../utils/validation';
+import { authenticate } from '../middleware/auth';
 import { ZodError } from 'zod';
 
 export const ingestRouter = Router();
 
-ingestRouter.post('/', async (req, res) => {
+ingestRouter.post('/', authenticate, async (req, res) => {
   try {
     const validated = bulkIngestSchema.parse(req.body);
     const result = await ingestService.ingestData(validated.data);
